@@ -6,28 +6,26 @@ body {
 
 * { box-sizing: border-box; }
 
-/* ── Layout principal ── */
 main {
     margin-top: 70px;
     min-height: calc(100vh - 70px);
     display: flex;
 }
 
-/* ── Hero éditorial ── */
-.hero {
+.haut-de-page {
     flex: 1;
     display: flex;
     flex-direction: column;
     padding: 56px 70px 48px;
 }
 
-.hero-top {
+.infos-but {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.overline {
+.but {
     font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 3px;
@@ -36,7 +34,7 @@ main {
     display: block;
 }
 
-.hero-index {
+.index-haut-de-page {
     font-family: 'Syne', sans-serif;
     font-size: 0.8rem;
     letter-spacing: 2px;
@@ -44,7 +42,7 @@ main {
     color: #aab2bd;
 }
 
-.hero-titre {
+.titre-haut-de-page {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
     font-size: clamp(2.6rem, 4.6vw, 4.4rem);
@@ -54,16 +52,15 @@ main {
     margin: 16px 0 0;
 }
 
-.hero-titre .nom-accent { color: #007BFF; }
+.titre-haut-de-page .Nom { color: #007BFF; }
 
-.hero-rule {
+.ligne-cahier {
     height: 1px;
     background: #d8dce1;
     margin: 32px 0 40px;
 }
 
-/* ── Grille image + texte ── */
-.hero-grid {
+.a-propos-de-moi {
     display: grid;
     grid-template-columns: 1fr 1.15fr;
     gap: 60px;
@@ -71,7 +68,7 @@ main {
     min-height: 0;
 }
 
-.hero-image {
+.Mon-Image {
     border: 1px solid #e1e4e8;
     border-radius: 4px;
     overflow: hidden;
@@ -82,20 +79,20 @@ main {
     justify-content: center;
 }
 
-.hero-image img {
+.Mon-Image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.hero-content {
+.mes-infos {
     display: flex;
     flex-direction: column;
     justify-content: center;
     max-width: 500px;
 }
 
-.hero-content h2 {
+.mes-infos h2 {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
     font-size: 1.9rem;
@@ -103,7 +100,7 @@ main {
     margin: 14px 0 18px;
 }
 
-.hero-content p {
+.mes-infos p {
     font-size: 1.02rem;
     font-weight: 300;
     line-height: 1.8;
@@ -111,15 +108,14 @@ main {
     margin: 0 0 30px;
 }
 
-/* ── Tech tags ── */
-.tech-tags {
+.mes-matieres {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 36px;
 }
 
-.tech-tags span {
+.mes-matieres span {
     font-size: 0.8rem;
     font-weight: 600;
     padding: 8px 18px;
@@ -131,13 +127,12 @@ main {
     transition: border-color 0.2s, color 0.2s;
 }
 
-.tech-tags span:hover {
+.mes-matieres span:hover {
     border-color: #007BFF;
     color: #007BFF;
 }
 
-/* ── CTA ── */
-.btn-cta {
+.Mes-Projets {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -153,19 +148,18 @@ main {
     transition: background 0.2s, transform 0.2s;
 }
 
-.btn-cta:hover {
+.Mes-Projets:hover {
     background: #0056b3;
     transform: translateY(-1px);
 }
 
-/* ── Responsive ── */
 @media (max-width: 900px) {
-    .hero { padding: 44px 32px; }
-    .hero-grid {
+    .haut-de-page { padding: 44px 32px; }
+    .a-propos-de-moi {
         grid-template-columns: 1fr;
         gap: 36px;
     }
-    .hero-image { min-height: 300px; }
-    .hero-content { max-width: none; }
-    .hero-titre { font-size: clamp(2.2rem, 9vw, 3.4rem); }
+    .Mon-Image { min-height: 300px; }
+    .mes-infos { max-width: none; }
+    .titre-haut-de-page { font-size: clamp(2.2rem, 9vw, 3.4rem); }
 }
