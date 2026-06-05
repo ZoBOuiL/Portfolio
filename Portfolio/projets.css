@@ -7,8 +7,6 @@ body {
     color: #333333;
     font-family: 'Outfit', sans-serif;
     padding-top: 70px;
-    height: 100vh;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
 }
@@ -36,17 +34,13 @@ body {
 }
 
 .liste-projets {
-    flex: 1;
-    min-height: 0;
-    padding: 20px 50px;
+    padding: 20px 50px 40px;
 }
 
 .grille-projets {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     gap: 20px;
-    height: 100%;
 }
 
 .carte-projet {
@@ -70,21 +64,25 @@ body {
 
 .image-projet {
     flex-shrink: 0;
-    height: 120px;
-    background: #f8f9fa;
+    height: 140px; /* Légèrement plus haut pour mettre en valeur les images */
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #e2e8f0;
     overflow: hidden;
+    position: relative;
 }
 
 .image-projet img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 85%;
+    max-height: 85%;
     object-fit: contain;
-    height: auto;
-    width: auto;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.carte-projet:hover .image-projet img {
+    transform: scale(1.08);
 }
 
 .infos-projet {
@@ -92,7 +90,6 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    min-height: 0;
 }
 
 .titre-projet {
@@ -108,15 +105,29 @@ body {
     font-size: 0.9rem;
     color: #666666;
     line-height: 1.6;
-    flex: 1;
-    overflow: hidden;
+}
+
+.meta-projet {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.icone-duree,
+.icone-equipe {
+    font-size: 0.82rem;
+    color: #555;
+    background: #f4f4f4;
+    padding: 3px 9px;
+    border-radius: 20px;
 }
 
 .outils-projet {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: 12px;
+    margin-top: 10px;
     flex-shrink: 0;
 }
 
